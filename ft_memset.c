@@ -6,7 +6,7 @@
 /*   By: dteruya <dteruya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:02:56 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/21 14:31:42 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/10/23 15:59:27 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *ptr, int c, size_t size)
 
 	index = 0;
 	str = (unsigned char *) ptr;
-	while (index < size && str[index] != '\0')
+	while (index < size)
 	{
 		str[index] = c;
 		index++;

@@ -6,7 +6,7 @@
 /*   By: dteruya <dteruya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 08:24:29 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/21 14:32:00 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/10/23 16:11:53 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,10 @@ char	*ft_strrchr(const char *str, int c)
 {
 	int	index;
 
-	index = 0;
-	while (str[index] != '\0')
-	{
-		index++;
-	}
+	index = ft_strlen(str);
 	while (index >= 0)
 	{
-		if (str[index] == c)
+		if (str[index] == (unsigned char)c)
 		{
 			return ((char *)&str[index]);
 		}

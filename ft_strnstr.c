@@ -6,7 +6,7 @@
 /*   By: dteruya <dteruya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 13:05:29 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/22 08:54:06 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/10/23 16:59:52 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,18 @@ char	*ft_strnstr(char *haystack, char *needle, size_t n)
 	size_t	index;
 	size_t	jindex;
 
+	if (needle[0] == '\0')
+		return ((char *) haystack);
 	index = 0;
-	if ((int)n < 0)
-		return (NULL);
-	while (index <= n)
+	while (haystack[index] != '\0' && index < n)
 	{
 		jindex = 0;
-		while (((haystack[index] == needle[jindex])
-				|| (needle[jindex] == '\0')) && (index <= n))
+		while ((index + jindex) < n
+			&& haystack[index + jindex] == needle[jindex])
 		{
-			if (needle[jindex] == '\0')
-			{
-				return (&haystack[index - jindex]);
-			}
-			else if (jindex >= n)
-				return (NULL);
+			if (needle[jindex + 1] == '\0')
+				return ((char *)&haystack[index]);
 			jindex++;
-			index++;
 		}
 		index++;
 	}

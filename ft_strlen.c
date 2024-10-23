@@ -6,13 +6,13 @@
 /*   By: dteruya <dteruya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 13:55:11 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/21 14:31:51 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/10/23 15:54:08 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	count;
 
