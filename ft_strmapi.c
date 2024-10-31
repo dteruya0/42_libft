@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dteruya <dteruya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 14:49:40 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/30 10:59:03 by dteruya          ###   ########.fr       */
+/*   Created: 2024/10/29 14:33:12 by dteruya           #+#    #+#             */
+/*   Updated: 2024/10/29 14:56:17 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, char const *src, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	count;
+	char	*str;
+	int		len;
+	int		index;
 
-	count = 0;
-	if (size == 0)
-		return (ft_strlen(src));
-	while ((src[count] != '\0') && (count < (size - 1)))
+	index = 0;
+	len = ft_strlen(s) + 1;
+	str = (char *)malloc(len * sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	while (s[index] != '\0')
 	{
-		dst[count] = src[count];
-		count++;
+		str[index] = f(index, s[index]);
+		index++;
 	}
-	if (count < size)
-	{
-		dst[count] = '\0';
-	}
-	while (src[count] != '\0')
-		count++;
-	return (count);
+	str[index] = '\0';
+	return (str);
 }
