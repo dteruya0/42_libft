@@ -6,7 +6,7 @@
 /*   By: dteruya <dteruya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:24:23 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/28 14:31:27 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/11/01 12:22:26 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	ft_length(int n)
 	return (count);
 }
 
-static char	*ft_cambio(int n, char *str, int len)
+static char	*ft_swap(int n, char *str, int len)
 {
 	int	index;
 
@@ -62,7 +62,7 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 		n = n * (-1);
 	}
-	str = ft_cambio(n, str, len);
+	str = ft_swap(n, str, len);
 	str[len] = '\0';
 	return (str);
 }

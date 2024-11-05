@@ -6,12 +6,11 @@
 /*   By: dteruya <dteruya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:53:36 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/23 17:14:47 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/11/04 10:01:15 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

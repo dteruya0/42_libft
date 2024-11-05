@@ -6,7 +6,7 @@
 /*   By: dteruya <dteruya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 10:02:10 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/21 16:24:13 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/11/01 14:52:11 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (index < n)
 	{
 		if (str1[index] > str2[index])
-		{
 			return (str1[index] - str2[index]);
-		}
 		else if (str1[index] < str2[index])
-		{
 			return (str1[index] - str2[index]);
-		}
 		index++;
 	}
 	return (0);

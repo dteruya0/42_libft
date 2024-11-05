@@ -6,26 +6,24 @@
 /*   By: dteruya <dteruya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 14:55:10 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/21 15:49:23 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/11/01 09:38:26 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
 	int	index;
 	int	number;
-	int	cond;
+	int	sign;
 
-	cond = 1;
+	sign = 1;
 	number = 0;
 	index = 0;
 	while ((nptr[index] >= 9 && nptr[index] <= 13) || nptr[index] == 32)
 		index++;
 	if (nptr[index] == '-')
 	{
-		cond = (-1);
+		sign = (-1);
 		index++;
 	}
 	else if (nptr[index] == '+')
@@ -35,5 +33,5 @@ int	ft_atoi(const char *nptr)
 		number = (number * 10) + (nptr[index] - '0');
 		index++;
 	}
-	return (number * cond);
+	return (number * sign);
 }
