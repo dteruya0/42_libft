@@ -1,0 +1,10 @@
+# Ignore everything 
+*
+
+# Don't ignore these file types
+!*.c
+!*.h
+!Makefile
+
+# Ignore the .vscode directory
+.vscode/
