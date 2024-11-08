@@ -6,12 +6,11 @@
 /*   By: dteruya <dteruya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:17:28 by dteruya           #+#    #+#             */
-/*   Updated: 2024/11/05 18:10:48 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/11/08 09:14:08 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_check_s(char *s1, char *set)
 {
