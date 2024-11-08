@@ -6,7 +6,7 @@
 /*   By: dteruya <dteruya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:23:55 by dteruya           #+#    #+#             */
-/*   Updated: 2024/11/05 18:10:36 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/11/08 08:48:20 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	while (s2[length2] != '\0')
 		strcat[index++] = s2[length2++];
-	if (s2[length2] == '\0')
-		strcat[index] = '\0';
+	strcat[index] = '\0';
 	return (strcat);
 }
