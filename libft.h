@@ -6,14 +6,13 @@
 /*   By: dteruya <dteruya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:53:17 by dteruya           #+#    #+#             */
-/*   Updated: 2024/11/07 12:32:41 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/11/07 16:03:40 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-// lib for size_t, malloc, write
 # include <stdlib.h>
 # include <unistd.h>
 
